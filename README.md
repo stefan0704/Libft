@@ -1,2 +1,2 @@
 # Libft
-Libft 42
+Libft con funciones del curso 42
