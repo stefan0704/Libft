@@ -1,2 +1,2 @@
 # Libft
-Libft con funciones del curso 42
+Libreria con funciones C del curso 42
