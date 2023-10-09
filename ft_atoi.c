@@ -6,12 +6,13 @@
 /*   By: smoraru <smoraru@student.42madrid.>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:20:02 by smoraru           #+#    #+#             */
-/*   Updated: 2023/10/06 21:20:04 by smoraru          ###   ########.fr       */
+/*   Updated: 2023/10/09 20:51:19 by smoraru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	result;
 	int	sign;
@@ -36,3 +37,13 @@ int	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
+/* 
+int main()
+{
+	char *a;
+	a =  "+11224424e45412"; 
+	a = "+----42";
+
+	printf("%d\n", atoi(a));
+	printf("%d\n", ft_atoi(a));
+}  */
