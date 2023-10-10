@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smoraru <smoraru@student.42madrid.>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 22:05:53 by smoraru           #+#    #+#             */
-/*   Updated: 2023/10/06 21:19:35 by smoraru          ###   ########.fr       */
+/*   Created: 2023/10/10 21:06:44 by smoraru           #+#    #+#             */
+/*   Updated: 2023/10/10 21:06:46 by smoraru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strnstr(const char *a, const char *b, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char *res;
+	size_t i;
+	size_t j;
 
+	res = malloc(len);
 	i = 0;
-	if (b[0] == '\0')
-		return ((char *)a);
-	while (a[i] != '\0' && i < n)
+	if (!res)
+		return (NULL);
+	while (i < ft_strlen(s))
 	{
-		j = 0;
-		while (b[j] == a[i + j] && b[j] != '\0' && i + j < n)
+		if (s[i] == (unsigned char)start)
 		{
-			if (b[j + 1] == '\0')
-				return ((char *) &a[i]);
-		j++;
+			j = 0;
+			while (j < len)
+			{
+				res[j] = s[i];
+				j++;
+				i++;
+			}
+			res[j] = '\0';
+			return (res);
 		}
-	i++;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
