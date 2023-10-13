@@ -6,36 +6,60 @@
 /*   By: smoraru <smoraru@student.42madrid.>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 21:06:44 by smoraru           #+#    #+#             */
-/*   Updated: 2023/10/10 21:06:46 by smoraru          ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:53 by smoraru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *res;
-	size_t i;
-	size_t j;
+	char	*ptr;
+	size_t	i;
 
-	res = malloc(len);
-	i = 0;
-	if (!res)
+	if (!s)
 		return (NULL);
-	while (i < ft_strlen(s))
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		if (s[i] == (unsigned char)start)
-		{
-			j = 0;
-			while (j < len)
-			{
-				res[j] = s[i];
-				j++;
-				i++;
-			}
-			res[j] = '\0';
-			return (res);
-		}
+		ptr[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	ptr[i] = '\0';
+	return (ptr);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	x;
+	char	*dst;
+	size_t	lens;
+
+	x = 0;
+	if (!s)
+		return (NULL);
+	lens = ft_strlen((char *)s);
+	if (len == 0 || lens == 0)
+		return (ft_strdup(""));
+	if (start >= lens)
+		return (ft_strdup(""));
+	if (len > lens - start)
+		len = lens - start;
+	dst = (char *)malloc(sizeof(char) * (len +1));
+	if (!dst)
+		return (0);
+	while ((start < ft_strlen(s)) && (x < len))
+	{
+			dst[x] = s[start];
+			start++;
+			x++;
+	}
+	dst[x] = '\0';
+	return (dst);
 }
