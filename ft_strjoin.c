@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smoraru <smoraru@student.42madrid.>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,29 +9,32 @@
 /*   Updated: 2023/10/13 18:51:53 by smoraru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
 	size_t	i;
+	size_t	j;
 
-	if (!s)
+	if (!s1 && !s2)
 		return (NULL);
-	if (ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > (ft_strlen(s) - start))
-		len = ft_strlen(s) - start;
-	ptr = malloc(sizeof(char) * (len + 1));
+	ptr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	j = 0;
+	while (s1[i])
 	{
-		ptr[i] = s[start + i];
+		ptr[i] = s1[i];
 		i++;
+	}
+	while (s2[j])
+	{
+		ptr[i] = s2[j];
+		i++;
+		j++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
