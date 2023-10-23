@@ -27,7 +27,7 @@ size_t	ft_count(char const *s, char c)
 		if ((s[i] == c && s[i + 1] != c && s[i + 1])
 			|| (s[i] != c && i == 0))
 			j++;
-	i++;
+		i++;
 	}
 	return (j);
 }

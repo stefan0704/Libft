@@ -26,9 +26,9 @@ char	*ft_strnstr(const char *a, const char *b, size_t n)
 		{
 			if (b[j + 1] == '\0')
 				return ((char *) &a[i]);
-		j++;
+			j++;
 		}
-	i++;
+		i++;
 	}
 	return (0);
 }
