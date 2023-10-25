@@ -42,7 +42,8 @@ void	ft_free(char **s, size_t i)
 	free(s);
 }
 
-char	**ft_esplit(char const *s, char c, size_t words)
+//Si peta limpia al reves en la linea linea 66-67
+char	**ft_matrix(char const *s, char c, size_t words)
 {
 	size_t	start;
 	size_t	len;
@@ -79,6 +80,6 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words = ft_count(s, c);
-	ptr = ft_esplit(s, c, words);
+	ptr = ft_matrix(s, c, words);
 	return (ptr);
 }
