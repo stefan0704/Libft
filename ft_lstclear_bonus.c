@@ -23,3 +23,20 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = tmp;
 	}
 }
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list *gon;
+	t_list *aux;
+
+	if (!(aux = *lst))
+		return ;
+	while (aux)
+	{
+		gon = aux->next;
+		del(aux->content);
+		free(aux);
+		aux = gon;
+	}
+	*lst = NULL;
+}
