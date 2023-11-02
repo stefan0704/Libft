@@ -15,3 +15,22 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
 }
+/*
+int main()
+{
+    char str1[] = "Hello, World!";
+    char str2[] = "This is a test";
+
+    printf("Antes de ft_bzero:\n");
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+
+    ft_bzero(str1, 5);
+    ft_bzero(str2+3, 10);
+
+    printf("\nDespués de ft_bzero:\n");
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+
+    return 0;
+}*/

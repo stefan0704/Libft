@@ -42,8 +42,11 @@ int main()
 {
 	char *a;
 	a =  "+11224424e45412"; 
-	a = "+----42";
-
-	printf("%d\n", atoi(a));
 	printf("%d\n", ft_atoi(a));
-}  */
+	a = "+----42";
+	printf("%d\n", ft_atoi(a));
+	a = "+-++-42543";
+	printf("%d\n", ft_atoi(a));
+	a = "-4254z3";
+	printf("%d\n", ft_atoi(a));
+}*/ 
