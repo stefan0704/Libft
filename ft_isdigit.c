@@ -20,3 +20,10 @@ int	ft_isdigit(int x)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	printf("%d\n",ft_isdigit(50));
+	printf("%d\n",ft_isdigit('3'));
+	printf("%d\n",ft_isdigit('a'));
+}*/

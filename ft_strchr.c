@@ -29,7 +29,7 @@ char	*ft_strchr(const char *s, int c)
 /*int main()
 {
 	char *a	= strchr("te\0ste", '\0');
-	char *b = ft_strchr("te\0ste", '\0');
+	char *b = ft_strchr("teste", 's');
 	printf("%s\n", a);
 	printf("%s\n", b);
 }*/

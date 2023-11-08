@@ -37,8 +37,8 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/* 
-int main()
+
+/*int main()
 {
 	char *a;
 	a =  "+11224424e45412"; 
@@ -49,4 +49,4 @@ int main()
 	printf("%d\n", ft_atoi(a));
 	a = "-4254z3";
 	printf("%d\n", ft_atoi(a));
-}*/ 
+}*/

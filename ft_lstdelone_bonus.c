@@ -20,3 +20,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		free(lst);
 	}
 }
+
+void pintaContent(void *content)
+{
+    printf("Elemento: %s\n", content);
+}
+
+int main()
+{
+	t_list *coso = ft_lstnew("hakuna atatat");
+	pintaContent(coso->content);
+	ft_lstdelone(coso,pintaContent);
+	if (coso == NULL)
+    {
+        printf("El elemento ha sido eliminado correctamente.\n");
+    }
+}

@@ -14,21 +14,20 @@
 //PORQUE n * 1?
 size_t	ft_numcounter(int n)
 {
-	size_t	numbers;
+	size_t	digits;
 
 	if (n <= 0)
-		numbers = 1;
+		digits = 1;
 	else
 	{
-		numbers = 0;
-		n *= 1;
+		digits = 0;
 	}
 	while (n != 0)
 	{
 		n /= 10;
-		numbers++;
+		digits++;
 	}
-	return (numbers);
+	return (digits);
 }
 
 char	*ft_itoa(int n)
@@ -59,3 +58,17 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
+
+/*int main()
+{
+	printf("%s\n", ft_itoa(325));
+	printf("%s\n", ft_itoa(-256));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(987654321));
+}*/
+
+
+
+
+
+

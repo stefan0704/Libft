@@ -27,3 +27,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 	}
 }
+
+/*int main()
+{
+	t_list *coso = ft_lstnew("patata");
+	t_list *coso2 = ft_lstnew("josefina");
+
+	ft_lstadd_back(&coso, coso2);
+	printf("%s",coso->next->content);
+}*/

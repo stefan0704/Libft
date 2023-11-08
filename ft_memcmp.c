@@ -28,3 +28,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	void *s1 = "patata";
+	void *s2 = "patata";
+	printf("%d\n",ft_memcmp(s1,s2,4));
+	s1 = "patato";
+	s2 = "patata";
+	printf("%d\n",ft_memcmp(s1,s2,6));
+}*/

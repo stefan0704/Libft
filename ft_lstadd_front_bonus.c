@@ -21,3 +21,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
+
+/*int main()
+{
+	t_list *coso = ft_lstnew("patata");
+	t_list *coso2 = ft_lstnew("josefina");
+
+	ft_lstadd_front(&coso2, coso);
+	printf("%s",coso2->next->content);
+}*/

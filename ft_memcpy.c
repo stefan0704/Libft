@@ -29,3 +29,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/*int main()
+{
+	void *a = "josele";
+	void *b = "manolo";
+	char c[8];
+	ft_memcpy(c,a,6);
+	printf("%s\n",c);
+	ft_memcpy(c,b,3);
+	printf("%s\n",c);
+}*/

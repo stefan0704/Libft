@@ -26,3 +26,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*int main(void)
+{
+    char *a = "Esternocleidomastoideo";
+    void *result = ft_memchr(a, 'l', 5);
+    printf("%s\n",result);
+    result = ft_memchr(a,'l',ft_strlen(a));
+    printf("%s\n",result);
+}*/

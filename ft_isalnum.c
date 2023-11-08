@@ -9,6 +9,7 @@
 /*   Updated: 2023/09/27 21:34:40 by smoraru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isalnum(int x)
 {
@@ -19,3 +20,11 @@ int	ft_isalnum(int x)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	printf("%d\n",ft_isalnum('a'));
+	printf("%d\n",ft_isalnum('0'));
+	printf("%d\n",ft_isalnum('A'));
+	printf("%d\n",ft_isalnum('?'));
+}*/

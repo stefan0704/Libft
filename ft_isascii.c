@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int x)
 {
 	if (x >= 0 && x <= 127)
@@ -18,3 +20,10 @@ int	ft_isascii(int x)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	printf("%d\n",ft_isascii(127));
+	printf("%d\n",ft_isascii(0));
+	printf("%d\n",ft_isascii(128));
+}*/
