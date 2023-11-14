@@ -58,7 +58,6 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
 /*int main()
 {
 	printf("%s\n", ft_itoa(325));
@@ -66,9 +65,3 @@ char	*ft_itoa(int n)
 	printf("%s\n", ft_itoa(-2147483648));
 	printf("%s\n", ft_itoa(987654321));
 }*/
-
-
-
-
-
-
