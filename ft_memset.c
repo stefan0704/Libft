@@ -26,12 +26,13 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
+/* 
 int main()
 {
-	//Da error porque al declarar directamente una cadena de caracteres, esta es de solo lectura
+	//Da error porque al declarar directamente una cadena de caracteres, 
+	esta es de solo lectura
 	char *a = "potato";
 	printf("%s",a);
 	ft_memset(a,'d',3);
 	printf("%s",a);
-}
+} */
